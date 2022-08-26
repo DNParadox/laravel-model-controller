@@ -11,8 +11,11 @@
 
     </head>
     <body>
+       {{-- <h1>  {{ $home_title }}</h1> --}}
+       Test
         @foreach ($movies as $movie)
-        <div>
+        <div> 
+
             <div>Titolo: {{ $movie->title }}</div>
             {{-- <div>Autore: {{ $movie->author }}</div>
             <div>Descrizione: {{ $movie->description }}</div> --}}
