@@ -12,7 +12,7 @@ class MovieController extends Controller
         // passarli alla view e stamparli
         $movies = Movie::all();
       
-
+        
       
        
         

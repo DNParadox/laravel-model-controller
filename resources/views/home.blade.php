@@ -1,26 +1,22 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-
-    </head>
-    <body>
-       {{-- <h1>  {{ $home_title }}</h1> --}}
-       Test
+@section('main_content')
+    <div class="container">
+        <div class="card-container">
         @foreach ($movies as $movie)
-        <div> 
+            <div class="column">
+            <div class="card"> 
 
-            <div>Titolo: {{ $movie->title }}</div>
-            {{-- <div>Autore: {{ $movie->author }}</div>
-            <div>Descrizione: {{ $movie->description }}</div> --}}
+                <div>Titolo: {{ $movie->title }}</div>
+                <div>Nazionalità: {{ $movie->nationality }} </div>
+                <div>Data di uscita: {{ $movie->date }} </div>
+                <div>Voto della critica: {{ $movie->vote }} </div>
+            
+            </div>
         </div>
-        <br>
+     
         @endforeach
-    </body>
-</html>
+        </div>
+    </div>
+
+@endsection
